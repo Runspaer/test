@@ -6,70 +6,99 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1215</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>120</y>
-      <width>80</width>
-      <height>23</height>
+      <x>0</x>
+      <y>-1</y>
+      <width>1211</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>ToolBar</string>
+    </property>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string> + </string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>71</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>another</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>94</x>
+      <y>70</y>
+      <width>1121</width>
+      <height>621</height>
      </rect>
     </property>
     <property name="text">
-     <string>Добавление</string>
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../FirstProjects/img/zrk.jpg</pixmap>
     </property>
    </widget>
-   <widget class="QTreeWidget" name="treeWidget">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
+   <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>140</y>
-      <width>256</width>
-      <height>192</height>
+      <x>89</x>
+      <y>700</y>
+      <width>121</width>
+      <height>51</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true"/>
+    <property name="title">
+     <string>GroupBox</string>
     </property>
-    <attribute name="headerVisible">
-     <bool>false</bool>
-    </attribute>
-    <column>
-     <property name="text">
-      <string>1</string>
-     </property>
-    </column>
-    <item>
-     <property name="text">
-      <string>Вертолёт</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Самолёт</string>
-     </property>
-     <item>
-      <property name="text">
-       <string>СУ-121</string>
-      </property>
-     </item>
-    </item>
-    <item>
-     <property name="text">
-      <string>ЗРК</string>
-     </property>
-    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>562</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>выбрать</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -77,12 +106,76 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1215</width>
      <height>20</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuFile"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3">
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="geometry">
+      <rect>
+       <x>-50</x>
+       <y>10</y>
+       <width>256</width>
+       <height>192</height>
+      </rect>
+     </property>
+     <attribute name="headerVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </column>
+     <item>
+      <property name="text">
+       <string>Самолёты</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>СУ-121</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>Вертолёты</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ЗРК</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+  </widget>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

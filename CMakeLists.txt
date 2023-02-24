@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(untitled1 LANGUAGES CXX)
+project(Zrk_Interface LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -27,25 +27,19 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 if(ANDROID)
-  add_library(untitled1 SHARED
+  add_library(Zrk_Interface SHARED
     main.cpp
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    dialog.cpp
-    dialog.h
-    dialog.ui
   )
 else()
-  add_executable(untitled1
+  add_executable(Zrk_Interface
     main.cpp
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    dialog.cpp
-    dialog.h
-    dialog.ui
   )
 endif()
 
-target_link_libraries(untitled1 PRIVATE Qt5::Widgets)
+target_link_libraries(Zrk_Interface PRIVATE Qt5::Widgets)
