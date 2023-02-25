@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTreeWidget>
+#include <QFileSystemModel>
+#include <QDockWidget>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,6 +21,7 @@ public:
 private slots:
 
 private:
+
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
